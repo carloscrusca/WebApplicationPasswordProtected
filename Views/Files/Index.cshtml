@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebApplicationPasswordProtected.Models.FileModel>
+
+
+
+@{
+    ViewData["Title"] = "Files";
+}
+
+<h4 class="text-center text-uppercase">List of Files</h4>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Descricao)</th>
+            <th>@Html.DisplayNameFor(model => model.TaskID)</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var file in Model)
+        {
+        <tr>
+            <td>
+                <a href="~/uploadfile/@file.Attachment" target="_blank">@file.Descricao></a>
+               
+            </td>
+            
+            
+            <td>@file.TaskID</td>
+
+        </tr>
+
+        }
+    </tbody>
+</table>   

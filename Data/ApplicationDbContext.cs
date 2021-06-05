@@ -13,5 +13,7 @@ namespace WebApplicationPasswordProtected.Data
             : base(options)
         {
         }
+        public DbSet<WebApplicationPasswordProtected.Models.Todo> Todo { get; set; }
+        public DbSet<WebApplicationPasswordProtected.Models.FileModel> File { get; set; }
     }
 }
